@@ -1,55 +1,13 @@
 # Cell Phone Usage Report
 Quick effort for the Cell Phone Usage Report
 
-### Data Model
-Database tables are in comma separated files with the header in the first row. 
+### Description
+The general idea with this code is to read in the data files (.csv) into a database structure and then generate a summary report.
+The code is incomplete as far as the final requirements are concerned, but the basic functionality is there meaning.
 
-**CellPhone.csv**
-*	employeeId
-*	employeeName
-*	purchaseDate
-*	model
+1.  Data for the two data source files (CellPhone.csv and CellPhoneUsageByMonth.csv) are loaded direction into an in memory SQL database
+with two tables CELL_PHONE and CELL_USAGE.  Again data is loaded directly into these tables.
 
-**CellPhoneUsageByMonth.csv** (beware that there may be more than one record for an employee on a single date, so it is not a perfect data in a perfect world)
-*	employeeId
-*	year
-*	month
-*	minutesUsed
-*	dataUsed
+2.  Step 1. then enables enables queries to generate reports.   I have included a quick examples of this.
 
-### Report  
-
-The report should contain the following information
-
-**Header Section**
-
-*	Report Run Date
-*	Number of Phones
-*	Total Minutes
-*	Total Data
-*	Average Minutes
-*	Average Data
-
-**Details Section**
-
-For each company cell phone provide the following information
-*	Employee Id
-*	Employee Name
-*	Model
-*	Purchase Date
-*	Minutes Usage
-    *	one column for each month
-*	Data Usage
-    *	one column for each month
-
-Report should be printed to a local printer in your computer.
-
-# Tech Stack
-Java is the programming language we want you use. Any version of Java will be fine. You can use open source libraries if you like.
-
-# Guidelines
-Build your own public repo on GitHub, and call it whatever you like. Build your solution in your repo, and include a README.md file that contains some instructions and notes about design choices you made that you want us be aware while reviewing your code. Email the URL for your github repo to your hiring manager once you begin the project so we can review your progress. Once your project is completed, please email your hiring manager.
-
-One of the major goals in this project is to see how you fill in ambiguities in your own creative way. There is no such thing as a perfect project here, just interpretations of the instructions above, so be creative in your approach.
-
-Thank you for your time. We are excited to review your project!
+3.  The project contains to primary source files that should be obvious how things are laid out.  
